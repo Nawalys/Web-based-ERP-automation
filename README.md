@@ -11,15 +11,18 @@ CREATE TABLE certificates (
   id INT AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(20) NOT NULL
 )
+
 CREATE TABLE departments (
   id INT AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(20) NOT NULL
 )
+
 CREATE TABLE examinationFollowUp (
   id INT AUTO_INCREMENT PRIMARY KEY,
   staffId INT NOT NULL,
   examinationId INT NOT NULL
 )
+
 CREATE TABLE examinationProcess (
   id INT AUTO_INCREMENT PRIMARY KEY,
   doctorId INT NOT NULL,
@@ -28,14 +31,17 @@ CREATE TABLE examinationProcess (
   examinationId INT NOT NULL,
   comment VARCHAR(250)
 )
+
 CREATE TABLE examinations (
   id INT AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(20) NOT NULL
 )
+
 CREATE TABLE positions (
   id INT AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(20) NOT NULL
 )
+
 CREATE TABLE staff (
   id INT AUTO_INCREMENT PRIMARY KEY,
   tc INT NOT NULL,
@@ -51,11 +57,13 @@ CREATE TABLE staff (
   position VARCHAR(30) NOT NULL,
   password VARCHAR(50) NOT NULL
 )
+
 CREATE TABLE staffCertificates (
   id INT AUTO_INCREMENT PRIMARY KEY,
   staffId INT NOT NULL,
   certificateId INT NOT NULL
 )
+
 CREATE TABLE supports (
   id INT AUTO_INCREMENT PRIMARY KEY,
   staffId INT NOT NULL,
@@ -64,6 +72,7 @@ CREATE TABLE supports (
   explanation VARCHAR(500) NOT NULL,
   situation VARCHAR(50) NOT NULL
 )
+
 CREATE TABLE trainingProcess (
   id INT AUTO_INCREMENT PRIMARY KEY,
   trainingId INT NOT NULL,
@@ -72,6 +81,7 @@ CREATE TABLE trainingProcess (
   time DATETIME NOT NULL,
   situation VARCHAR(50) NOT NULL
 )
+
 CREATE TABLE trainings (
   id INT AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(50) NOT NULL
